@@ -13,6 +13,7 @@
         <module>provider01</module>
         <module>eureka</module>
         <module>consumer01</module>
+        <module>hystrix</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

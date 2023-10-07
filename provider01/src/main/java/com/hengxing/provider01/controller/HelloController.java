@@ -53,4 +53,12 @@ public class HelloController {
         LOGGER.info("添加成功" + user.getUsername());
     }
 
+    @GetMapping("/user1")
+    @ResponseBody
+    public User getUser(Integer id){
+        User hengxing = new User("hengxing", 19, "shannxi-xianyang");
+        LOGGER.info("服务端返回一次数据" + hengxing);
+        return hengxing;
+    }
+
 }
