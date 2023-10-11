@@ -9,6 +9,6 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @project EurekaTest
  * @date 10/11/2023 00:12:50
  */
-@FeignClient("provider01")
+@FeignClient(value = "provider01",fallback = FallBackService.class)
 public interface CommonService extends commonApi {
 }
