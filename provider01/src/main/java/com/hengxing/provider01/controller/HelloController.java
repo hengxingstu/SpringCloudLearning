@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.*;
 public class HelloController {
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloController.class);
 
-    @GetMapping("/hello")
-    @ResponseBody
-    public String sayHello(){
-        return "你好啊~~provider01";
-    }
+//    @GetMapping("/hello")
+//    @ResponseBody
+//    public String sayHello(){
+//        return "你好啊~~provider01";
+//    }
 
     @PostMapping("/user")
     @ResponseBody
