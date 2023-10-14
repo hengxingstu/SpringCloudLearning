@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启服务自动发现
+      routes:
+        - id: provider01
+          uri: lb://PROVIDER01
+          predicates:
+            - Path=/p/**
+#            - After=2023-10-20T01:01:01+08:00[Asia/Shanghai]
+            - Query=name,hengxing.*
+          filters:
+            - StripPrefix=1
+            - addRequestParameter=name,hengxing
+server:
+  port: 8889
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
